@@ -1,0 +1,142 @@
+{
+    "products": [
+        {
+            "category": "Tea",
+            "name": "Cinnamon Tea",
+            "price": 56,
+            "discount": "-10%",
+            "image": "images/Lemontea.jpg"
+        },
+        {
+            "category": "Tea",
+            "name": "Handpicked Black Tea",
+            "price": 65,
+            "image": "images/tea.jpg"
+        },
+        {
+            "category": "Tea",
+            "name": "Green Tea",
+            "price": 56,
+            "discount": "-10%",
+            "image": "images/green-tea.jpg"
+        },
+        {
+            "category": "Tea",
+            "name": "Herbal Tea",
+            "price": 36,
+            "image": "images/Herbal.jpg"
+        }
+    ],
+
+
+
+
+
+    "aboutImages": [
+        {
+            "category": "Essential Oil",
+            "name": "Almond Oil",
+            "title": "Ayurvedic Soap",
+            "price": 120.00,
+            "image": "images/Almond.jpg",
+            "description": "Euismod dolorem consectetuer, wisi purus provident tellus asperiores aptent, vero malesuada metus porta laoreet tenetur aliquid laboris etiam lacus distinctio habitasse beatae corporis diamlorem. Volutpat. Primis, mollit corrupti odit.",
+            "tags": "almond, massage, oil, spa"
+        },
+        {
+            "category": "Soap",
+            "name": "Ayurvedic Soap",
+            "price": 32,
+            "image": "images/Ayuerveda.jpg",
+            "description":"Sagittis odio suscipit odio libero tellus fugit accusantium tincidunt scelerisque, officia mi augue, ullamcorper, pulvinar ex egestas venenatis proident, morbi, adipisci cumque ratione.",
+            "tags":"Category: Soap Tags: Soap"
+        
+        }
+        ,
+        {
+            "category": "Essential Oil",
+            "name": "Beard Oil",
+            "price": 155,
+            "image": "images/Beardoil.jpg",
+             "discount": "-8%",
+            "description":"Morbi occaecat ea perferendis molestie repellat purus, cras velit minim culpa conubia, laudantium habitant tristique, aenean occaecati volutpat temporibus netus porta dignissim ac aliqua commodo modi nulla, iste aliquet quidem. Quisquam consectetuer repellat, auctor eaque sociis. Egestas beatae mus quia, egestas .",
+            "tags": " growth, heair, oil"
+        },
+        {
+            "category": "Soap",
+            "name": "Butter Coco",
+            "price": 40,
+                "discount": "-11%",
+            "image": "images/Butter1.jpg",
+            "description":"Morbi occaecat ea perferendis molestie repellat purus, cras velit minim culpa conubia, laudantium habitant tristique, aenean occaecati volutpat temporibus netus porta dignissim ac aliqua commodo modi nulla, iste aliquet quidem. Quisquam consectetuer repellat, auctor eaque sociis. Egestas beatae mus quia, egestas ."
+        },
+        {
+            "category": "Tea",
+            "name": "Cinnamon tea",
+            "price": 56,
+            "image": "images/Lemontea.jpg",
+            "discount": "-10%",
+            "description":"Morbi occaecat ea perferendis molestie repellat purus, cras velit minim culpa conubia, laudantium habitant tristique, aenean occaecati volutpat temporibus netus porta dignissim ac aliqua commodo modi nulla, iste aliquet quidem. Quisquam consectetuer repellat, auctor eaque sociis. Egestas beatae mus quia, egestas .",
+            "tags":" ayurveda, herbal, tea"
+        },
+        {
+            "category": "Soap",
+            "name": "Coco Soap",
+            "price": 55,
+            "image": "images/Soap.jpg",
+           "description":"Fugit quos potenti beatae nullam fringilla cubilia tempora. Nulla tincidunt adipisci iusto porttitor donec tempor nisi ducimus quam.",
+            "tags":"ayurvedic, handmade, soap"
+        },
+           {
+            "category": "Essential Oil",
+            "name": "Exracted Olive Oil",
+            "price": 30,
+            "image": "images/Oliveoil.jpg",
+            "discount": "-6%",
+            "description": "Magnam primis fames illum incididunt felis numquam harum quo aliquet. Natus dignissim rerum earum justo massa omnis taciti. Libero, optio sollicitudin.",
+            "tags":" eat, food, oil, olive"
+        },
+        {
+            "category": "Tea",
+            "name": "Green Tea",
+            "price": 56,
+            "image": "images/green-tea.jpg",
+            "discount": "-10%",
+            "description":"Dolor penatibus elit cum bibendum alias justo et quibusdam vero. Id nostrud. Consectetuer nulla temporibus! Nostrum veniam atque rerum feugiat fugiat pretium fugit nunc ligula! Donec perferendis temporibus quisque pariatur rerum. Id nostrud.",
+            "tags":": ayurvedic, lavender, soap"
+        },
+        {
+            "category": "Tea",
+            "name": "Handpicked Black Tea",
+            "price": 65,
+            "image": "images/tea.jpg",
+            "description":"Dolor penatibus elit cum bibendum alias justo et quibusdam vero. Id nostrud. Consectetuer nulla temporibus! Nostrum veniam atque rerum feugiat fugiat pretium fugit nunc ligula! Donec perferendis temporibus quisque pariatur rerum. Id nostrud.",
+            "tags":" ayurvveda, black, tea"
+        },
+        {
+            "category": "Essential Oil",
+            "name": "Herbal Tea",
+            "price": 36,
+            "image": "images/Herbal.jpg",
+            "description":"Dolor penatibus elit cum bibendum alias justo et quibusdam vero. Id nostrud. Consectetuer nulla temporibus! Nostrum veniam atque rerum feugiat fugiat pretium fugit nunc ligula! Donec perferendis temporibus quisque pariatur rerum. Id nostrud",
+            "tags":" ayurvedic, herbal, tea"
+        },
+        {
+            "category": "Soap",
+            "name": "Lavender Soap Bar",
+            "price": 23,
+            "image": "images/Lavender.jpg",
+            "description":"Fugiat natus posuere eaque ullamco imperdiet ipsum aptent porta ipsam porttitor eiusmod quia nibh quos consectetuer doloribus! Officiis eaque, animi litora auctor! Nihil egestas qui, pariatur inventore, modi, massa nibh, necessitatibus.",
+            "tags":" ayurvedic, lavender, soap"
+
+        },
+        {
+            "category": "Essentail Oil",
+            "name": "Seasame Oil",
+            "price": 380,
+            "image": "images/Sesame.jpg",
+            "discount": "-5%",
+            "description":"Dolor penatibus elit cum bibendum alias justo et quibusdam vero. Id nostrud. Consectetuer nulla temporibus! Nostrum veniam atque rerum feugiat fugiat pretium fugit nunc ligula! Donec perferendis temporibus quisque pariatur rerum. Id nostrud.",
+            "tags":"cooking, oil, sesame"
+        }
+    ]
+}
