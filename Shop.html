@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-xl">
+    <div class="container-fluid">
+        <img src="images/navlogo.png"
+             class="navlogo"
+             alt="Logo">
+        <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link"
+                   href="home.html">
+                    Home
+                </a>
+
+
+                <a class="nav-link"
+                   href="About.html">
+
+                    About Us
+
+                </a>
+                <a class="nav-link active"
+                   href="Shop.html">
+                    Shop
+                </a>
+
+
+                <a class="nav-link"
+                   href="MyAccount.html">
+                    My Account
+                </a>
+
+
+                <a class="nav-link"
+                   href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+
+        <a href="#"
+           class="cart-icon"
+           id="openCart">
+
+            <span id="cartTotal">
+                ₹0.00
+            </span>
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+        </a>
+    </div>
+</nav>
+
+
+<div class="shopback">
+<section class="shop-section">
+    <div class="container">
+        <div class="row shop-products"
+             id="shopContainer">
+        </div>
+    </div>
+</section>
+</div>
+
+
+
+<div class="quick-view-overlay"
+     id="quickViewOverlay">
+    <div class="quick-view-modal">
+        <button type="button"
+                class="quick-view-close"
+                id="quickViewClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="quick-view-image">
+            <img id="quickViewImage"
+                 src=""
+                 alt="Product">
+        </div>
+
+
+        <div class="quick-view-content">
+            <p class="quick-view-category"
+               id="quickViewCategory">
+            </p>
+
+            <h2 id="quickViewName">
+            </h2>
+            <div class="quick-view-price">
+                <strong id="quickViewPrice">
+                </strong>
+                <span>
+                    + Free Shipping
+                </span>
+            </div>
+
+
+            <p class="quick-view-description"
+               id="quickViewDescription">
+            </p>
+
+            <div class="quick-view-info">
+                <span>
+                    Category:
+                </span>
+
+                <strong id="quickViewCategoryBottom">
+                </strong>
+
+                <span class="quick-view-tags-title">
+                    Tags:
+                </span>
+
+                <strong id="quickViewTags">
+                </strong>
+
+            </div>
+
+
+            <div class="quick-view-bottom">
+                <div class="quick-view-quantity">
+                    <button type="button"
+                            id="quickViewMinus">
+
+                        −
+
+                    </button>
+
+
+                    <span id="quickViewQuantity">
+                        1
+                    </span>
+
+
+                    <button type="button"
+                            id="quickViewPlus">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+                <button type="button"
+                        class="quick-view-add"
+                        id="quickViewAdd">
+
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card text-center">
+    <div class="card-body social-iconstext-light">
+        <div class="social-icons">
+            <a href="#top">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#top">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="#top">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#top">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+
+
+        <p class="card-text">
+            Copyright © 2026 Ayurveda |
+            Powered by Ayurveda
+        </p>
+    </div>
+</div>
+
+
+<div class="cart-overlay"
+     id="cartOverlay">
+</div>
+<div class="cart-sidebar"
+     id="cartSidebar">
+
+    <div class="cart-header">
+        <h3>
+            Shopping Cart
+        </h3>
+        <button
+            type="button"
+            class="close-cart"
+            id="closeCart">
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+    </div>
+
+    <div class="cart-items"
+         id="cartItems">
+    </div>
+
+
+    <div class="cart-footer">
+        <div class="cart-subtotal">
+            <span>
+                Subtotal:
+            </span>
+            <strong id="sidebarTotal">
+                ₹0.00
+            </strong>
+        </div>
+
+        <a href="card.html"
+           class="cart-btn view-cart">
+            View Cart
+        </a>
+
+        <a href="checkout.html"
+           class="cart-btn checkout-btn">
+            Checkout
+        </a>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="Script.js"></script>
+
+
+</body>
+
+</html>

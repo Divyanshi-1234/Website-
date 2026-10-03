@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-xl">
+    <div class="container-fluid">
+        <img src="images/navlogo.png"
+             class="navlogo"
+             alt="Logo">
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link"
+                   href="home.html">
+                    Home
+                </a>
+                <a class="nav-link"
+                   href="About.html">
+                    About Us
+                </a>
+                <a class="nav-link"
+                   href="Shop.html">
+                    Shop
+                </a>
+
+                <div class="account-menu">
+                    <a class="nav-link active"
+                       href="MyAccount.html">
+                        My Account
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="account-dropdown">
+                        <a href="MyAccount.html">
+                            Orders
+                        </a>
+                        <a href="MyAccount.html">
+                            Account details
+                        </a>
+                    </div>
+                </div>
+
+                <a class="nav-link"
+                   href="Contact.html">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+
+        <a href="#"
+           class="cart-icon"
+           id="openCart">
+
+            <span id="cartTotal">
+                ₹0.00
+            </span>
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+        </a>
+    </div>
+</nav>
+
+
+
+    <div class="login-background">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <section class="account-section text-center">
+                        <div class="login-box">
+                            <h1>
+                                Login
+
+                            </h1>
+
+                            <div class="login-field">
+                                <input type="text"
+                                       id="username"
+                                       placeholder="Username or email address *Required">
+                            </div>
+
+
+
+                            <div class="login-field password-field">
+                                <input type="password"
+                                       id="loginPassword"
+                                       placeholder="Password *Required">
+                                <button type="button"
+                                        class="password-eye"
+                                        id="passwordEye"
+                                        aria-label="Show password">
+
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+                            </div>
+
+                            <div class="remember-row">
+                                <label>
+                                    <input type="checkbox"
+                                           id="remember">
+
+                                    <span>
+                                        Remember me
+                                    </span>
+
+
+                                </label>
+                            </div>
+
+                            <button type="button"
+                                    class="login-btn"
+                                    id="loginButton">
+                                Log in
+                            </button>
+
+
+                            <a href="#"
+                               class="lost-password">
+                                Lost your password?
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card text-center">
+        <div class="card-body social-iconstext-light">
+            <div class="social-icons">
+                <a href="#top">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#top">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+
+                <a href="#top">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+                <a href="#top">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+
+            </div>
+
+
+            <p class="card-text">
+                Copyright © 2026 Ayurveda |
+                Powered by Ayurveda
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="cart-overlay"
+         id="cartOverlay">
+    </div>
+
+    <div class="cart-sidebar"
+         id="cartSidebar">
+        <div class="cart-header">
+            <h3>
+                Shopping Cart
+            </h3>
+
+
+            <button type="button"
+                    class="close-cart"
+                    id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items"
+             id="cartItems">
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>
+                    Subtotal:
+                </span>
+                <strong id="sidebarTotal">
+
+                    ₹0.00
+                </strong>
+            </div>
+
+
+            <a href="card.html"
+               class="cart-btn view-cart">
+                View Cart
+            </a>
+
+            <a href="checkout.html"
+               class="cart-btn checkout-btn">
+                Checkout
+            </a>
+        </div>
+    </div>
+
+
+
+    <script src="Script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
+ 
+ 
+    <script> 
+ 
+ 
+        const passwordInput = 
+            document.getElementById("loginPassword"); 
+ 
+ 
+        const passwordEye = 
+            document.getElementById("passwordEye"); 
+ 
+ 
+        const loginButton = 
+            document.getElementById("loginButton"); 
+ 
+ 
+        const usernameInput = 
+            document.getElementById("username"); 
+ 
+ 
+        const rememberInput = 
+            document.getElementById("remember"); 
+ 
+ 
+ 
+        passwordEye.addEventListener("click", function () { 
+ 
+ 
+            if (passwordInput.type === "password") { 
+ 
+ 
+                passwordInput.type = "text"; 
+ 
+ 
+                passwordEye.innerHTML = 
+                    '<i class="fa-solid fa-eye-slash"></i>'; 
+ 
+ 
+                passwordEye.setAttribute( 
+                    "aria-label", 
+                    "Hide password" 
+                ); 
+ 
+ 
+            } 
+ 
+            else { 
+ 
+ 
+                passwordInput.type = "password"; 
+ 
+ 
+                passwordEye.innerHTML = 
+                    '<i class="fa-solid fa-eye"></i>'; 
+ 
+ 
+                passwordEye.setAttribute( 
+                    "aria-label", 
+                    "Show password" 
+                ); 
+ 
+ 
+            } 
+ 
+        }); 
+ 
+ 
+ 
+        loginButton.addEventListener("click", function () { 
+ 
+ 
+            usernameInput.value = ""; 
+ 
+            passwordInput.value = ""; 
+ 
+            rememberInput.checked = false; 
+ 
+ 
+            passwordInput.type = "password"; 
+ 
+ 
+            passwordEye.innerHTML = 
+                '<i class="fa-solid fa-eye"></i>'; 
+ 
+        }); 
+ 
+ 
+    </script> 
+ 
+ 
+</body> 
+ 
+</html> 

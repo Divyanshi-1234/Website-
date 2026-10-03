@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body id="productDetailPage">
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container">
+            <a href="home.html" class="navbar-brand">
+                <img
+                    src="images/navlogo.png"
+                    alt="Ayurveda"
+                    class="img-fluid"
+                    style="width:128px;">
+
+            </a>
+            <button
+                class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
+                <div class="navbar-nav ms-auto align-items-lg-center">
+                    <a
+                        class="nav-link px-lg-3"
+                        href="home.html">
+                        Home
+                    </a>
+
+
+                    <a
+                        class="nav-link px-lg-3"
+                        href="About.html">
+                        About Us
+                    </a>
+
+                    <a
+                        class="nav-link px-lg-3"
+                        href="Shop.html">
+                        Shop
+                    </a>
+
+
+                    <a
+                        class="nav-link px-lg-3"
+                        href="MyAccount.html">
+                        My Account
+                    </a>
+
+                    <a
+                        class="nav-link px-lg-3"
+                        href="Contact.html">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+
+            <a
+                href="#"
+                id="openCart"
+                class="cart-icon text-decoration-none ms-3 d-none d-lg-flex align-items-center gap-2">
+                <span id="cartTotal">
+                    ₹0.00
+                </span>
+
+                <span class="position-relative">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span
+                        id="cartCount"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+
+                        0
+                    </span>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+
+     <div  class="productbackground">
+    <div class="productbackground py-5">
+        <div class="container bg-white px-3 px-md-5 py-5">
+            <section class="row g-4 g-xl-5 align-items-start">
+                <div class="col-12 col-lg-6">
+                    <div class="overflow-hidden">
+                        <img
+                            id="detailProductImage"
+                            src=""
+                            alt="Product"
+                            class="img-fluid w-100"
+                            ondblclick="openProductImage()">
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 position-relative">
+                    <div class="d-flex justify-content-end gap-2 mb-2">
+                        <button
+                            type="button"
+                            class="btn rounded-circle border"
+                            onclick="previousProduct()"
+                            aria-label="Previous product">
+
+                            <i class="fa-solid fa-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn rounded-circle border"
+                            onclick="nextProduct()"
+                            aria-label="Next product">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <p
+                        id="detailCategory"
+                        class="mb-2 product-detail-category">
+                    </p>
+
+
+                    <h1
+                        id="detailProductName"
+                        class="mb-2">
+                    </h1>
+
+                    <div
+                        id="detailProductPrice"
+                        class="mb-2 product-detail-price">
+                    </div>
+
+                    <p
+                        id="detailDescription"
+                        class="mb-3 product-detail-text">
+                    </p>
+                    <div
+                        class="d-flex flex-wrap align-items-center gap-3 mt-4">
+                        <div
+                            class="product-detail-quantity d-flex align-items-center border">
+                            <button
+                                type="button"
+                                onclick="changeDetailQuantity(-1)"
+                                class="btn border-0 px-3">
+
+                                −
+                            </button>
+
+                            <span
+                                id="detailQuantity"
+                                class="px-3">
+                                1
+                            </span>
+
+
+                            <button
+                                type="button"
+                                onclick="changeDetailQuantity(1)"
+                                class="btn border-0 px-3">
+
+                                +
+
+                            </button>
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            id="detailAddToCartButton"
+                            onclick="addDetailProductToCart(this)"
+                            class="btn product-detail-add-button">
+                            Add to cart
+                        </button>
+
+                    <div
+                        class="border-top border-success mt-4 pt-3">
+                        <p
+                            class="mb-1 product-detail-meta-text">
+                            Category:
+                            <span id="detailCategoryBottom"></span>
+                        </p>
+
+                        <p
+                            class="mb-0 product-detail-meta-text">
+                            Tags:
+                            <span id="detailTags"></span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="mt-5 pt-4">
+                <div class="border-top border-success d-flex gap-4">
+                    <button
+                        type="button"
+                        class="btn border-0 border-top border-3 border-success rounded-0 active"
+                        onclick="showProductTab('description', this)">
+                        Description
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn border-0 rounded-0"
+                        onclick="showProductTab('reviews', this)">
+                        Reviews (0)
+                    </button>
+                </div>
+
+                <div
+                    id="descriptionTab"
+                    class="product-tab-content">
+
+                    <p
+                        class="mt-4 product-detail-long-description">
+                        Labore minim duis recusandae fuse placerat
+                        facilis ipsam fusce ullamcorper mi nobis
+                        aliquiet corrupti consequat cillum aute iure
+                        eiusmod saepe, bibendum. Eiusmod dolorem
+                        consectetur, wisi purus provident tellus
+                        asperiores aptent, vero malesuada metus porta
+                        laoreet tenetur aliquid laboris etiam lacus
+                        distinctio habitasse beatae corporis diamlorem.
+                        Volutpat. Primis, mollit corrupti odit.
+
+                    </p>
+
+
+                    <p
+                        class="mt-3 product-detail-long-description">
+                        Labore minim duis recusandae fuse placerat
+                        facilis ipsam fusce ullamcorper mi nobis
+                        aliquiet corrupti consequat cillum aute iure
+                        eiusmod saepe, bibendum. Eiusmod dolorem
+                        consectetur, wisi purus provident tellus
+                        asperiores aptent, vero malesuada metus porta
+                        laoreet tenetur aliquid laboris etiam lacus
+                        distinctio habitasse beatae corporis diamlorem.
+                        Volutpat. Primis, mollit corrupti odit.
+
+                    </p>
+
+                </div>
+
+                <div
+                    id="reviewsTab"
+                    class="product-tab-content d-none">
+                    <div
+                        class="border p-4 mt-4">
+                        <h3
+                            class="fs-4 fw-normal">
+                            Be the first to review
+                            "<span id="reviewProductName">Product</span>"
+
+                        </h3>
+
+
+                        <p>
+                            Your email address will not be published.
+                            Required fields are marked *
+                        </p>
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Your rating *
+                            </label>
+
+                            <div class="fs-4">
+
+                                ☆ ☆ ☆ ☆ ☆
+
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Your review *
+                            </label>
+
+
+                            <textarea
+                                class="form-control"
+                                rows="4"></textarea>
+                        </div>
+
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">
+                                    Name *
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    class="form-control">
+                            </div>
+
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">
+                                    Email *
+                                </label>
+
+
+                                <input
+                                    type="email"
+                                    class="form-control">
+                            </div>
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn text-white mt-3 px-4 rounded-pill bg-success">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-5 pt-4">
+                <h2 class="mb-4">
+                    Related products
+                </h2>
+
+                <div
+                    id="relatedProducts"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+
+    <div
+        class="product-detail-sticky-bar
+               position-fixed
+               bottom-0
+               start-0
+               w-100
+               bg-white
+               border-top
+               shadow-sm
+               py-2
+               px-3">
+
+        <div class="container">
+
+            <div class="row align-items-center g-2">
+                <div class="col flex-grow-1">
+                    <div
+                        class="d-flex align-items-center gap-2">
+                        <img
+                            id="stickyProductImage"
+                            src=""
+                            alt="Product"
+                            class="flex-shrink-0 object-fit-cover"
+                            width="48"
+                            height="48">
+
+                        <span
+                            id="stickyProductName"
+                            class="text-truncate">
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <strong id="stickyProductPrice">
+                        ₹0.00
+                    </strong>
+                </div>
+
+
+                <div class="col-auto">
+                    <div
+                        class="d-flex align-items-center border">
+                        <button
+                            type="button"
+                            onclick="changeDetailQuantity(-1)"
+                            class="btn px-2 py-1 border-0">
+
+                            −
+
+                        </button>
+
+                        <span
+                            id="stickyQuantity"
+                            class="px-2">
+                            1
+                        </span>
+
+
+                        <button
+                            type="button"
+                            onclick="changeDetailQuantity(1)"
+                            class="btn px-2 py-1 border-0">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-auto">
+
+                    <button
+                        type="button"
+                        id="stickyAddToCartButton"
+                        onclick="addDetailProductToCart(this)"
+                        class="btn product-detail-sticky-button">
+
+                        Add to cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        class="modal fade"
+        id="productImageModal"
+        tabindex="-1"
+        aria-labelledby="productImageModalLabel"
+        aria-hidden="true">
+
+        <div
+            class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div
+                class="modal-content">
+
+                <button
+                    type="button"
+                    class="btn-close position-absolute top-0 end-0 m-3 z-3"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+
+                <div
+                    class="modal-body text-center p-3">
+
+                    <img
+                        id="lightboxProductImage"
+                        src=""
+                        alt="Product"
+                        class="img-fluid">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer
+        class="card text-center border-0 rounded-0">
+        <div class="card-body">
+            <div class="social-icons mb-3">
+                <a
+                    href="#top"
+                    class="mx-2">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#top"
+                    class="mx-2">
+                    <i class="fa-brands fa-twitter"></i>
+
+                </a>
+
+
+                <a
+                    href="#top"
+                    class="mx-2">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a
+                    href="#top"
+                    class="mx-2">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+
+            <p class="card-text mb-0">
+
+                Copyright © 2026 Ayurveda |
+                Powered by Ayurveda
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- SCRIPTS -->
+
+    <script src="Script.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <script>
+
+        /* IMAGE LIGHTBOX */
+
+        function openProductImage() {
+
+            const mainImage =
+                document.getElementById("detailProductImage");
+
+            const lightboxImage =
+                document.getElementById("lightboxProductImage");
+
+
+            if (!mainImage || !lightboxImage) {
+                return;
+            }
+
+
+            if (
+                !mainImage.src ||
+                mainImage.src === window.location.href
+            ) {
+                return;
+            }
+
+
+            lightboxImage.src =
+                mainImage.src;
+
+
+            const modalElement =
+                document.getElementById("productImageModal");
+
+
+            if (!modalElement) {
+                return;
+            }
+
+
+            const modal =
+                bootstrap.Modal.getOrCreateInstance(
+                    modalElement
+                );
+
+
+            modal.show();
+
+        }
+
+
+
+        /* DESCRIPTION / REVIEWS */
+
+        function showProductTab(tabName, button) {
+
+            const descriptionTab =
+                document.getElementById("descriptionTab");
+
+            const reviewsTab =
+                document.getElementById("reviewsTab");
+
+
+            if (!descriptionTab || !reviewsTab) {
+                return;
+            }
+
+
+            descriptionTab.classList.add("d-none");
+
+            reviewsTab.classList.add("d-none");
+
+
+            document
+                .querySelectorAll(
+                    "#productDetailPage .border-top > button"
+                )
+                .forEach(function (btn) {
+
+                    btn.classList.remove(
+                        "active",
+                        "border-top",
+                        "border-3",
+                        "border-success"
+                    );
+
+                });
+
+
+            if (tabName === "reviews") {
+
+                reviewsTab.classList.remove("d-none");
+
+
+                button.classList.add(
+                    "active",
+                    "border-top",
+                    "border-3",
+                    "border-success"
+                );
+
+
+                const productName =
+                    document
+                        .getElementById("detailProductName")
+                        ?.innerText
+                        .trim();
+
+
+                const reviewProductName =
+                    document.getElementById(
+                        "reviewProductName"
+                    );
+
+
+                if (reviewProductName) {
+
+                    reviewProductName.innerText =
+                        productName || "Product";
+
+                }
+
+            } else {
+
+                descriptionTab.classList.remove("d-none");
+
+
+                button.classList.add(
+                    "active",
+                    "border-top",
+                    "border-3",
+                    "border-success"
+                );
+
+            }
+
+        }
+
+
+
+        /* QUANTITY */
+
+        function changeDetailQuantity(change) {
+
+            const quantity =
+                document.getElementById("detailQuantity");
+
+            const stickyQuantity =
+                document.getElementById("stickyQuantity");
+
+
+            if (!quantity) {
+                return;
+            }
+
+
+            let current =
+                parseInt(quantity.innerText) || 1;
+
+
+            current += change;
+
+
+            if (current < 1) {
+                current = 1;
+            }
+
+
+            quantity.innerText =
+                current;
+
+
+            if (stickyQuantity) {
+
+                stickyQuantity.innerText =
+                    current;
+
+            }
+
+        }
+
+
+
+        /* CURRENT PRODUCT INDEX */
+
+        function getCurrentProductIndex() {
+
+            const url =
+                new URL(window.location.href);
+
+            const params =
+                url.searchParams;
+
+
+            if (params.has("index")) {
+
+                const value =
+                    parseInt(
+                        params.get("index")
+                    );
+
+
+                if (!isNaN(value)) {
+                    return value;
+                }
+
+            }
+
+
+            if (params.has("productIndex")) {
+
+                const value =
+                    parseInt(
+                        params.get("productIndex")
+                    );
+
+
+                if (!isNaN(value)) {
+                    return value;
+                }
+
+            }
+
+
+            if (params.has("id")) {
+
+                const value =
+                    parseInt(
+                        params.get("id")
+                    );
+
+
+                if (!isNaN(value)) {
+                    return value;
+                }
+
+            }
+
+
+            if (params.has("product")) {
+
+                const value =
+                    parseInt(
+                        params.get("product")
+                    );
+
+
+                if (!isNaN(value)) {
+                    return value;
+                }
+
+            }
+
+
+            return 0;
+
+        }
+
+
+
+        /* SET PRODUCT INDEX */
+
+        function setProductIndex(index) {
+
+            const url =
+                new URL(window.location.href);
+
+            const params =
+                url.searchParams;
+
+
+            let parameterName =
+                "index";
+
+
+            if (params.has("productIndex")) {
+
+                parameterName =
+                    "productIndex";
+
+            } else if (params.has("id")) {
+
+                parameterName =
+                    "id";
+
+            } else if (params.has("product")) {
+
+                parameterName =
+                    "product";
+
+            }
+
+
+            params.set(
+                parameterName,
+                index
+            );
+
+
+            url.search =
+                params.toString();
+
+
+            window.location.href =
+                url.href;
+
+        }
+
+
+
+        /* PREVIOUS PRODUCT */
+
+        async function previousProduct() {
+
+            try {
+
+                const response =
+                    await fetch("product.json");
+
+
+                const data =
+                    await response.json();
+
+
+                const products =
+                    data.products || [];
+
+
+                if (!products.length) {
+                    return;
+                }
+
+
+                let currentIndex =
+                    getCurrentProductIndex();
+
+
+                if (
+                    currentIndex < 0 ||
+                    currentIndex >= products.length
+                ) {
+
+                    currentIndex = 0;
+
+                }
+
+
+                currentIndex--;
+
+
+                if (currentIndex < 0) {
+
+                    currentIndex =
+                        products.length - 1;
+
+                }
+
+
+                setProductIndex(
+                    currentIndex
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Previous product error:",
+                    error
+                );
+
+            }
+
+        }
+
+
+
+        /* NEXT PRODUCT */
+
+        async function nextProduct() {
+
+            try {
+
+                const response =
+                    await fetch("product.json");
+
+
+                const data =
+                    await response.json();
+
+
+                const products =
+                    data.products || [];
+
+
+                if (!products.length) {
+                    return;
+                }
+
+
+                let currentIndex =
+                    getCurrentProductIndex();
+
+
+                if (
+                    currentIndex < 0 ||
+                    currentIndex >= products.length
+                ) {
+
+                    currentIndex = 0;
+
+                }
+
+
+                currentIndex++;
+
+
+                if (
+                    currentIndex >= products.length
+                ) {
+
+                    currentIndex = 0;
+
+                }
+
+
+                setProductIndex(
+                    currentIndex
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Next product error:",
+                    error
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
